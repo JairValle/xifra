@@ -1,0 +1,104 @@
+:root {
+    --primary-color: #d42c1b;
+    --background-color: #d4d3d3;
+    --secondary-background-color: #f0f2f6;
+    --text-color: #31333F;
+    --font: "Source Sans Pro", sans-serif;
+    --subheader-color: #b52819; /* Color de subheaders */
+    --title-color: #d42c1b; /* Color para los títulos */
+}
+
+
+section[data-testid='stSidebar'] {
+    background-color: #111;
+    flex-shrink: unset !important;
+}
+
+h1 {
+    color: var(--title-color); /* Aplica el color a los títulos */
+}
+
+h3 {
+    color: var(--subheader-color); /* Aplica el color a los subheaders */
+}
+
+/* Aumentar el tamaño de la fuente de los tabs */
+.css-1r6ja9o {
+    font-size: 20px !important;  /* Ajusta el tamaño del texto */
+    padding: 12px 24px !important;  /* Ajusta el padding para hacer los tabs más grandes */
+}
+
+/* Cambiar el tamaño de los tabs cuando están activos */
+.css-1r6ja9o.stTab.active {
+    background-color: #d42c1b; /* Cambia el color de fondo cuando está activo */
+    color: white !important; /* Cambia el color del texto */
+    font-size: 22px !important; /* Aumentar tamaño de fuente cuando está activo */
+}
+
+@media (hover: hover) and (min-width: 600px) and (max-width: 769px) {
+    header[data-testid="stHeader"] {
+        display: none;
+    }
+
+    section[data-testid='stSidebar'] {
+        height: 100%;
+        min-width: 95px !important;
+        width: 95px !important;
+        margin-left: 305px;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s ease;
+        padding-top: 60px;
+        white-space: nowrap;
+    }
+
+    section[data-testid='stSidebar']:hover {
+        min-width: 330px !important;
+    }
+
+    button[kind="header"] {
+        display: none;
+    }
+
+    div[data-testid="collapsedControl"] {
+        display: none;
+    }
+}
+
+@media (hover: hover) and (min-width: 769px) {
+    header[data-testid="stHeader"] {
+        display: none;
+    }
+
+    section[data-testid='stSidebar'] {
+        height: 100%;
+        min-width: 95px !important;
+        width: 95px !important;
+        transform: translateX(0px);
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s ease;
+        padding-top: 60px;
+        white-space: nowrap;
+    }
+
+    section[data-testid='stSidebar']:hover {
+        min-width: 330px !important;
+    }
+
+    button[kind="header"] {
+        display: none;
+    }
+
+    div[data-testid="collapsedControl"] {
+        display: none;
+    }
+}
